@@ -17,7 +17,7 @@
     "concurrently": "~2.1.0"
   },
   "scripts": {
-    "start": "concurrently \"node index.js\" \"parse-dashboard --config ./parse-dashboard-config.json --allowInsecureHTTP\""
+    "start": "concurrently \"node index.js\""
   },
   "engines": {
     "node": ">=4.3"
