@@ -13,10 +13,11 @@
     "kerberos": "~0.0.x",
     "parse": "~1.8.0",
     "parse-server": "~2.2.12",
-    "parse-dashboard": "~1.0.14"
+    "parse-dashboard": "~1.0.14",
+    "concurrently": "~2.1.0"
   },
   "scripts": {
-    "start": "node index.js | parse-dashboard --config ./parse-dashboard-config.json --allowInsecureHTTP"
+    "start": "concurrently \"node index.js\" \"parse-dashboard --config ./parse-dashboard-config.json --allowInsecureHTTP\""
   },
   "engines": {
     "node": ">=4.3"
