@@ -74,3 +74,11 @@ httpServer.listen(port, function() {
 
 // This will enable the Live Query real-time server
 ParseServer.createLiveQueryServer(httpServer);
+
+var exec = require('child_process').exec;
+var cmd = 'parse-dashboard --config ./parse-dashboard-config.json --allowInsecureHTTP';
+
+exec(cmd, function(error, stdout, stderr) {
+  // command output is in stdout
+  console.log('open');
+});
