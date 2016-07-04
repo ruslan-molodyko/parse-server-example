@@ -2,7 +2,7 @@
     "allowInsecureHTTP": true,
     "apps": [
     {
-      "serverURL": "http://localhost:1337/parse",
+      "serverURL": "https://parse-server-instance.herokuapp.com/parse",
       "appId": "app_id",
       "masterKey": "master_key",
       "appName": "Just do it"
