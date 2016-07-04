@@ -17,7 +17,7 @@ var api = new ParseServer({
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
   appId: process.env.APP_ID || 'app_id',
   masterKey: process.env.MASTER_KEY || 'master_key', //Add your master key here. Keep it secret!
-  serverURL: process.env.SERVER_URL || 'https://localhost:1337/parse',  // Don't forget to change to https if needed
+  serverURL: process.env.SERVER_URL || 'http://localhost:1337/parse',  // Don't forget to change to https if needed
   liveQuery: {
     classNames: ["Posts", "Comments"] // List of classes to support for query subscriptions
   }
@@ -30,12 +30,17 @@ var dashboard = new ParseDashboard({
     "allowInsecureHTTP": true,
     "apps": [
     {
-      "serverURL": "https://localhost:1337/parse",
+      "serverURL": "http://localhost:1337/parse",
       "appId": "app_id",
       "masterKey": "master_key",
       "appName": "Just do it"
-    }
-  ]
+    }],
+    "users": [
+        {
+             "user":"admin",
+             "pass":"admin"
+        }
+    ]
 });
 
 var app = express();
