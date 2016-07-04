@@ -16,7 +16,7 @@
     "parse-dashboard": "~1.0.14"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "export PARSE_DASHBOARD_ALLOW_INSECURE_HTTP=1 && node index.js"
   },
   "engines": {
     "node": ">=4.3"
