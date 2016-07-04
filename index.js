@@ -27,6 +27,7 @@ var api = new ParseServer({
 // javascriptKey, restAPIKey, dotNetKey, clientKey
 
 var dashboard = new ParseDashboard({
+    "allowInsecureHTTP": true,
     "apps": [
     {
       "serverURL": "http://localhost:1337/parse",
