@@ -1,0 +1,16 @@
+{
+    "allowInsecureHTTP": true,
+    "apps": [
+    {
+      "serverURL": "http://localhost:1337/parse",
+      "appId": "app_id",
+      "masterKey": "master_key",
+      "appName": "Just do it"
+    }],
+    "users": [
+        {
+             "user":"admin",
+             "pass":"admin"
+        }
+    ]
+}
