@@ -49,7 +49,7 @@ var app = express();
 app.use('/public', express.static(path.join(__dirname, '/public')));
 
 // make the Parse Dashboard available at /dashboard
-app.use('/dashboard', dashboard);
+//app.use('/dashboard', dashboard);
 
 // Serve the Parse API on the /parse URL prefix
 var mountPath = process.env.PARSE_MOUNT || '/parse';
