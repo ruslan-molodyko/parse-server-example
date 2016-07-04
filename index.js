@@ -30,7 +30,7 @@ var dashboard = new ParseDashboard({
     "allowInsecureHTTP": true,
     "apps": [
     {
-      "serverURL": "http://localhost:1337/parse",
+      "serverURL": "https://parse-server-instance.herokuapp.com/parse",
       "appId": "app_id",
       "masterKey": "master_key",
       "appName": "Just do it"
@@ -49,7 +49,7 @@ var app = express();
 app.use('/public', express.static(path.join(__dirname, '/public')));
 
 // make the Parse Dashboard available at /dashboard
-//app.use('/dashboard', dashboard);
+app.use('/dashboard', dashboard);
 
 // Serve the Parse API on the /parse URL prefix
 var mountPath = process.env.PARSE_MOUNT || '/parse';
