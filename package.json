@@ -16,7 +16,7 @@
     "parse-dashboard": "~1.0.14"
   },
   "scripts": {
-    "start": "node index.js & parse-dashboard --config ./parse-dashboard-config.json --allowInsecureHTTP"
+    "start": "node index.js | parse-dashboard --config ./parse-dashboard-config.json --allowInsecureHTTP"
   },
   "engines": {
     "node": ">=4.3"
